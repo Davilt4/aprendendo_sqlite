@@ -4,7 +4,7 @@ from pathlib import Path
 dataBase_path = Path(__file__).parent / 'produtos.db'
 
 def conectar():
-    conn = sqlite3.connect('produtos.db')
+    conn = sqlite3.connect(dataBase_path)
     return conn
 
 def criar_tabela(conn):
